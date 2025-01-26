@@ -22,3 +22,5 @@ localhost:5432
 db:5433
 postgres:5432
 db:5432 > this one, the hostname to connect to postgress is the same as the service defined in *.yaml, which is "db". the internal port used by postgres database is 5432.
+
+Question 3.-Question 6. see uoload_data.ipynb file.
