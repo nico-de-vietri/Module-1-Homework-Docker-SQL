@@ -23,4 +23,12 @@ db:5433
 postgres:5432
 db:5432 > this one, the hostname to connect to postgress is the same as the service defined in *.yaml, which is "db". the internal port used by postgres database is 5432.
 
-Question 3.-Question 6. see uoload_data.ipynb file.
+Question 3.-Question 6. see upload_data.ipynb file.
+
+Question 7.
+The correct answer is: terraform init, terraform apply -auto-approve, terraform destroy
+
+Explanation of the correct sequence:
+terraform init: Initializes & configures the backend, installs plugins/providers, & checks out an existing configuration from a version control.
+terraform apply -auto-approve: this generates a plan and applies the changes automatically without requiring interactive approval
+terraform destroy: this removes all resources managed by Terraform.
