@@ -23,12 +23,26 @@ db:5433
 postgres:5432
 db:5432 > this one, the hostname to connect to postgress is the same as the service defined in *.yaml, which is "db". the internal port used by postgres database is 5432.
 
-Question 3.-Question 6. see upload_data.ipynb file.
+Question 3.-Question 6. see upload_data.ipynb file SQL section.
 
-Question 7.
+
+Question 7. Terraform Workflow
+Which of the following sequences, respectively, describes the workflow for:
+
+Downloading the provider plugins and setting up backend,
+Generating proposed changes and auto-executing the plan
+Remove all resources managed by terraform`
+Answers:
+
+terraform import, terraform apply -y, terraform destroy
+teraform init, terraform plan -auto-apply, terraform rm
+terraform init, terraform run -auto-approve, terraform destroy
+terraform init, terraform apply -auto-approve, terraform destroy > this one
+terraform import, terraform apply -y, terraform rm
+
+
 The correct answer is: terraform init, terraform apply -auto-approve, terraform destroy
 
-Explanation of the correct sequence:
 terraform init: Initializes & configures the backend, installs plugins/providers, & checks out an existing configuration from a version control.
 terraform apply -auto-approve: this generates a plan and applies the changes automatically without requiring interactive approval
 terraform destroy: this removes all resources managed by Terraform.
